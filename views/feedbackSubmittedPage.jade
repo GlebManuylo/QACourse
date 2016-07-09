@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    #feedback-submited-container
+        #form-header Congratulations! Feedback submitted!
+        if subscription == 'on'
+            | Thank you for subscription
+        else
+            | Please subscribe later
+        .clearfix

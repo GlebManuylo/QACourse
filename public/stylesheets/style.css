@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../images/background.jpg);
+}
+
+#feedback-form-container {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+
+}
+
+#feedback-form {
+    width: 350px;
+    height: 350px;
+}
+
+#form-header {
+    font-size: larger;
+}
+
+#incorrect-input-error-message {
+    color: #ff000a;
+    font-size: 0.9em;
+}
+
+#message-if {
+    width: 300px;
+    height: 100px
+}
+
+.button-submit:hover {background: #FFFFFF; color:#206060;} {
+    color: #ffffff;
+    width: 80px;
+    height: 30px;
+    border-radius: 35px !important;
+
+
+}
+
+.submit-button {
+    text-align: center;
+    color: #083838;
+}
+
+.form-input {
+    width: 300px;
+}
+
+#subscribe-if {
+    width: 15px;
+}
+
+

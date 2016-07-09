@@ -1,0 +1,48 @@
+extends layout
+
+block content
+    #feedback-form-container
+        form(method="post")#feedback-form
+            #form-header
+            h2 Contact us form
+            .form-group
+                label.label-name Name *
+                .input-field
+                    input.form-input#name-if(type='text', name='name')
+            .form-group
+                label.label-email Email *
+                .input-field
+                    input.form-input#email-if(type='text', name='email')
+            .form-group
+                label.label-subject Subject *
+                .input-field
+                    input.form-input#subject-if(type='text', name='subject')
+            .form-group
+                label.label-attachment Attachment
+                .input-field
+                    input.form-input#attachment-if(type='file', name='attachment')
+            .form-group
+                label.label-message Message *
+                .input-field
+                    textarea.form-input#message-if(name='message')
+            .form-group
+                .input-field
+                    input.form-input#subscribe-if(type='checkbox', name='subscribe')
+                    label.label-message I wish to receive information about Company news and events.
+            .controls
+                button(type='submit').button-submit
+                    span.submit-button
+                    | Submit
+            .clearfix
+
+block scripts
+    script(src='/vendor/jquery-2.2.3.min.js')
+    script(src='/javascripts/views/feedback.js')
+    script(src='/javascripts/validators/feedbackFormValidator.js')
+
+
+//Name: accepts "&, $, -" symbols, no lengths check.
+//Subject: may be empty, may contain any symbol, has 256 symbols length check.
+//Email: "vaild" mistype.
+//Attachment: accepts any file except *.doc, maximum file size - 1,5 Mb.
+//Message: not accepts "<, >, #" symbols, has 800 length check.
